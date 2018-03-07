@@ -78,29 +78,32 @@ public class Solution {
             dh.put((q[0] + q[1]), 0);
         }
 
-        /*System.out.println("Same row obstacle is :"+sr);
+        /* Console logs while debugging 
+        System.out.println("Same row obstacle is :"+sr);
         System.out.println("Same col obstacle is :"+sc);
         System.out.println("Same Uphill obstacle is :"+uh);
         System.out.println("Same downhill obstacle is :"+dh);
-        System.out.println("-----------------------------------");*/
-        //System.out.println("obstacle just below is :"+sr.lowerKey(q[1]));
-
-        //System.out.println("obstacle just above is :"+sr.higherKey(q[1]));
-
-/*        System.out.println("SR high: "+((Integer)sr.higherKey(q[1]))+" SR Low: "+((Integer)sr.lowerKey(q[1])));
+        System.out.println("-----------------------------------");
+        System.out.println("obstacle just below is :"+sr.lowerKey(q[1]));
+        System.out.println("obstacle just above is :"+sr.higherKey(q[1]));
+        System.out.println("SR high: "+((Integer)sr.higherKey(q[1]))+" SR Low: "+((Integer)sr.lowerKey(q[1])));
         System.out.println("SC high: "+((Integer)sc.higherKey(q[0]))+" SC Low: "+((Integer)sc.lowerKey(q[0])));
         System.out.println("UH high: "+((Integer)uh.higherKey(q[0]))+" UH Low: "+((Integer)uh.lowerKey(q[0])));
         System.out.println("DH high: "+((Integer)dh.higherKey(q[1]))+" DH Low: "+((Integer)dh.lowerKey(q[1])));
-        System.out.println("-----------------------------------");*/
+        System.out.println("-----------------------------------");
+        */
 
         int srcount = ((Integer) sr.higherKey(q[1]) - (Integer) sr.lowerKey(q[1]) - 2);
         int sccount = ((Integer) sc.higherKey(q[0]) - (Integer) sc.lowerKey(q[0]) - 2);
         int uhcount = ((Integer) uh.higherKey(q[0]) - (Integer) uh.lowerKey(q[0]) - 2);
         int dhcount = ((Integer) dh.higherKey(q[1]) - (Integer) dh.lowerKey(q[1]) - 2);
-/*        System.out.println("Same row open blocks are: "+srcount);
+        
+        /* Console logs while debugging
+        System.out.println("Same row open blocks are: "+srcount);
         System.out.println("Same col open blocks are: "+sccount);
         System.out.println("Same Uphill open blocks are: "+uhcount);
-        System.out.println("Same downhill open blocks are: "+dhcount);*/
+        System.out.println("Same downhill open blocks are: "+dhcount);
+        */
 
         System.out.println((srcount + sccount + uhcount + dhcount));
 
